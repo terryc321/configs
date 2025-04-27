@@ -1,0 +1,34 @@
+
+;;; The following lines added by ql:add-to-init-file:
+#-quicklisp
+(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+                                       (user-homedir-pathname))))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))
+
+
+;; 
+
+;; (push "/home/terry/code/lem/" ql:*local-project-directories*)
+;; (push "/home/terry/src/slime-2.31/" ql:*local-project-directories*)
+(push "/home/terry/common-lisp/" ql:*local-project-directories*)
+
+(when (interactive-stream-p *standard-input*)
+  (ql:quickload :sbcl-xrepl))
+
+;; (when (interactive-stream-p *standard-input*)
+;;   (asdf:load-system "sbcl-xrepl"))
+
+;; asdf relegated now using quicklisp 
+;; 
+;;  (setf asdf:*central-registry*
+;;        (list* '*default-pathname-defaults*
+;;               #p"/home/terry/src/slime-2.31/" ;; slime swank
+;;               #p"/home/terry/code/lem/"  ;; lem 2.0 latest
+;;               #p"/usr/share/common-lisp/systems/"
+;;               asdf:*central-registry*))
+;; 
+;; ;;(asdf:oos 'asdf:load-op :swank)
+
+
+
