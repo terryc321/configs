@@ -1,0 +1,11 @@
+;; -*- scheme -*-
+;; ~/.csirc
+;; chicken scheme csi interpreter init file
+;; just load everything
+
+(import (chicken format))
+(import (chicken pretty-print))
+(import srfi-1)
+(import srfi-69)
+
+;;(editor-command "emacsclient")

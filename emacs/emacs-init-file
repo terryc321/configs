@@ -1,0 +1,93 @@
+
+;; careful loading files as idris2 changed font and colors believe it or not
+
+
+(setq inhibit-startup-screen t)
+(setq inhibit-splash-screen t)
+;; a default config to be placed at ~/.emacs.d/init.el
+
+(set-background-color "white")
+(set-foreground-color "black")
+(set-background-color "black")
+(set-foreground-color "yellow")
+
+;; (require 'vertico)
+;; (vertico-mode 'global)
+
+;;(setq geiser-repl-current-project-function #'default-directory)
+
+;;(set-frame-font "Inconsolata-12" nil t)
+(set-frame-font "FiraCode-12" nil t)
+;;(set-frame-font "FiraCode-10" nil t)
+
+(setq make-backup-files nil)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+
+;; melpa
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
+(require 'vertico)
+(require 'helm)
+(require 'helm-fuzzier)
+
+(require 'geiser)
+;; (require 'geiser-chicken)
+(require 'geiser-guile)
+;; (require 'geiser-mit)
+;; (require 'geiser-chibi)
+;; (require 'geiser-stklos)
+
+
+;; (setq geiser-active-implementations '(chicken guile mit chibi stklos))
+;; ;;(setq geiser-chicken-binary "csi -:c")
+;; (setq geiser-chicken-binary "csi")
+;; (setq geiser-guile-binary "guile")
+;; (setq geiser-mit-binary "mit-scheme")
+;; (setq geiser-chibi-binary "chibi")
+;; (setq geiser-stklos-binary "stklos")
+
+(setq geiser-active-implementations '(guile))
+(setq geiser-guile-binary "guile")
+
+
+;; slime from melpa
+(setq inferior-lisp-program "sbcl")
+
+;; ;; idris2
+;; (add-to-list 'load-path "~/src/idris2/idris2-mode/")
+;; (require 'idris2-mode)
+
+(setq geiser-repl-current-project-function #'ignore )
+(set-default 'truncate-lines nil)
+
+;; --- configure function to open init file when calle
+(defun my-init-file ()  
+  (interactive)
+  (find-file "/home/terry/.emacs.d/init.el"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(ac-geiser ac-haskell-process ac-helm ac-slime company-box
+	       company-flx company-fuzzy counsel flx flx-ido fussy
+	       fuzzy fuzzy-finder fvwm-mode geiser-chez geiser-chibi
+	       geiser-chicken geiser-gambit geiser-guile geiser-mit
+	       geiser-racket geiser-stklos helm-fuzzier ido-at-point
+	       ido-vertical-mode ido-yes-or-no idris-mode ivy ivy-fuz
+	       ivy-hydra ivy-yasnippet prop-menu slime-company
+	       slime-repl-ansi-color vertico)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

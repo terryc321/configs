@@ -1,0 +1,13 @@
+;; -*- scheme -*-
+;; .scheme.init
+;; mit-scheme init file
+;; just load everything
+
+;; mit-scheme init file
+(load-option 'synchronous-subprocess)
+;; for run-shell-command required by aubrey jaffer slib
+(load "/home/terry/src/slib/slib/mitscheme.init")
+;; now (require 'factor)
+;; (prime? 3) should return t
+
+

@@ -1,0 +1,22 @@
+;; -*- scheme -*-
+;; .guile
+;; guile init file
+;; just load everything
+
+;; add slib to load path
+(add-to-load-path "/home/terry/src/slib")
+
+(load "/home/terry/src/slib/slib/guile-3.init")
+
+;; so after all this , guile does not implement read-line
+;; mind blown ...
+
+;; for readline 
+(use-modules (ice-9 rdelim))
+
+;; make slib available if required 
+(use-modules (ice-9 slib))
+
+;; line-i/o is not available for guile scheme !! use rdelim instead 
+;; (require 'line-i/o) 
+
