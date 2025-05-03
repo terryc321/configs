@@ -1,9 +1,12 @@
 #!/bin/bash
 
-cp -v ~/.guile ~/code/configs/guile/guile-init-file
-cp -v ~/.csirc ~/code/configs/chicken/chicken-init-file
-cp -v ~/.scheme.init ~/code/configs/mit-scheme/mit-scheme-init-file
-cp -v ~/.emacs.d/init.el ~/code/configs/emacs/emacs-init-file
+CONFIG=/home/terry/code/configs/
+
+cp -v ~/.guile ${CONFIG}guile/guile-init-file
+cp -v ~/.csirc ${CONFIG}chicken/chicken-init-file
+cp -v ~/.scheme.init ${CONFIG}mit-scheme/mit-scheme-init-file
+cp -v ~/.emacs.d/init.el ${CONFIG}emacs/emacs-init-file
+cp -v ~/.bashrc ${CONFIG}/bash/bash-init-file
 
 
 
