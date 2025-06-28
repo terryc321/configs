@@ -1,10 +1,18 @@
 
 ;; careful loading files as idris2 changed font and colors believe it or not
-
-
-(setq inhibit-startup-screen t)
-(setq inhibit-splash-screen t)
 ;; a default config to be placed at ~/.emacs.d/init.el
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(setq inhibit-splash-screen t)         ; hide welcome screen
+(setq inhibit-startup-screen t)
+
+;; (setq make-backup-files nil)
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+
 
 (set-background-color "white")
 (set-foreground-color "black")
