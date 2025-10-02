@@ -1,0 +1,36 @@
+dep: libacl1 (>= 2.2.23)
+dep: libasound2 (>= 1.0.16)
+dep: libc6 (>= 2.35)
+dep: libcairo2 (>= 1.10.0)
+dep: libdbus-1-3 (>= 1.9.14)
+dep: libfontconfig1 (>= 2.12.6)
+dep: libfreetype6 (>= 2.2.1)
+dep: libgccjit0 (>= 11) [not mips64el, s390x]
+dep: libgdk-pixbuf-2.0-0 (>= 2.22.0)
+dep: libgif7 (>= 5.1)
+dep: libglib2.0-0 (>= 2.37.3)
+dep: libgmp10 (>= 2:6.2.1+dfsg1)
+dep: libgnutls30 (>= 3.7.5)
+dep: libgpm2 (>= 1.20.7)
+dep: libgtk-3-0 (>= 3.21.4)
+dep: libharfbuzz0b (>= 0.9.42)
+dep: libice6 (>= 1:1.0.0)
+dep: libjansson4 (>= 2.14)
+dep: libjpeg62-turbo (>= 1.3.1)
+dep: liblcms2-2 (>= 2.2+git20110628)
+dep: libm17n-0 (>= 1.6.1)
+dep: libotf1 (>= 0.9.16)
+dep: libpango-1.0-0 (>= 1.18.0)
+dep: libpng16-16 (>= 1.6.2-1)
+dep: librsvg2-2 (>= 2.47.3)
+dep: libselinux1 (>= 3.1~)
+dep: libsm6
+dep: libsystemd0
+dep: libtiff6 (>= 4.0.3)
+dep: libtinfo6 (>= 6)
+dep: libx11-6
+dep: libxext6
+dep: libxfixes3 (>= 1:4.0.1)
+dep: libxml2 (>= 2.7.4)
+dep: libxrender1
+dep: zlib1g (>= 1:1.1.4)

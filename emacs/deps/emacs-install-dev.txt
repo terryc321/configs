@@ -1,15 +1,3 @@
-
-# emacs 
-
-https://www.masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
-
-## prior dependencies
-
-as root install necessary libraries
-
-```
-#!/bin/bash
-
 apt install libacl1
 apt install libasound2
 apt install libc6
@@ -34,7 +22,7 @@ apt install libm17n
 apt install libotf1
 apt install libpango
 apt install libpng16
-apt install librsvg2-2
+apt install librsvg2
 apt install libselinux1
 apt install libsm6libsystemd0
 apt install libtiff6
@@ -79,44 +67,3 @@ apt install libxext6libxfixes3-dev
 apt install libxml2-dev
 apt install libxrender1-dev
 apt install zlib1g-dev
-
-# 
-apt install libxaw7 libxaw7-dev
-apt install libtree-sitter-dev
-apt install gnutls-dev
-apt install libgif-dev libgif7 libungif-bin
-
-
-```
-
-# the source code
-
-```
-git clone git@github.com:emacs-mirror/emacs.git
-cd emacs 
-./autogen.sh
-```
-
-# mybuild script
-
-```
-./configure \
-  --prefix=/opt/emacs
-  --without-compress-install \
-  --with-native-compilation \
-  --with-tree-sitter \
-  --with-json \
-  --with-mailutils \
-  --with-cairo \
-  --with-harfbuzz \
-  --with-imagemagick \
-  CFLAGS="-O3 -mtune=native -march=native -fomit-frame-pointer"
-
-make -j8
-sudo make install
-```
-
-# capture build messages both error and normal 
-```
-./mybuild.sh 2>&1 | tee mybuild.log 
-```
