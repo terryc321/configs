@@ -85,7 +85,25 @@ apt install libxaw7 libxaw7-dev
 apt install libtree-sitter-dev
 apt install gnutls-dev
 apt install libgif-dev libgif7 libungif-bin
+apt install libxaw3dxft-dev
+apt install libmagickwand-dev
 
+# same version as gcc installed
+apt install libgccjit-13-dev
+
+apt install libgpm-dev
+
+# wxgtk - this is not needed for emacs?
+apt install libwxgtk3.2-dev 
+
+# gtk 
+apt install libgtk-3-dev
+
+# installs the world !
+apt install libwebkitgtk-6.0-dev
+apt install libwebkit2gtk-4.1-dev
+
+apt install libqt5webkit5-dev   
 
 ```
 
@@ -101,7 +119,7 @@ cd emacs
 
 ```
 ./configure \
-  --prefix=/opt/emacs
+  --prefix=/opt/emacs \
   --without-compress-install \
   --with-native-compilation \
   --with-tree-sitter \
@@ -119,4 +137,18 @@ sudo make install
 # capture build messages both error and normal 
 ```
 ./mybuild.sh 2>&1 | tee mybuild.log 
+```
+
+
+# compile
+
+```
+make -j8 2>&1 | tee mybuild.compilation.log 
+```
+
+
+# install
+
+```
+sudo make install
 ```
