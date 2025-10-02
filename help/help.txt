@@ -1,0 +1,140 @@
+
+help.txt
+=================================================================================================
+
+sbcl-2.5.9
+emacs-30.2
+
+sets up ok for common lisp development with SLY 
+
+=================================================================================================
+
+emacs + guile + ares 
+
+https://git.sr.ht/~abcdw/emacs-arei
+
+https://git.sr.ht/~abcdw/guile-ares-rs
+
+guix shell guile-next guile-ares-rs -- \ # line is optional, sets needed load paths
+guile -c '((@ (ares server) run-nrepl-server))'
+
+
+guix shell emacs emacs-arei -- \ # line is optional, it provides Emacs and Arei
+emacs
+
+(setq geiser-mode-auto-p nil)
+
+(require 'arei)
+
+M-x sesman-start RET (C-c C-s C-s)
+
+C-u M-x sesman-start RET
+
+There is no documentation functionality in Arei and Ares RS at the moment, but you can lookup documentation for most of the Guile and Scheme functions using C-h S.
+
+
+
+
+=================================================================================================
+
+~/code/guile-scheme/guile-sdl-learning
+~/code/guile-scheme/guile-sdl-learning/cairo-sdl-tutorial/
+~/code/guile-scheme/guile-sdl-learning/cairo-sdl-tutorial/001-window : c code user interface + sdl + cairo
+
+added mouse support
+added a few keys on keyboard - next step add full keyboard support
+
+do we have any timing ? change rapid key event for typing ? how ? 
+
+incorporate some limited text editor support into application
+
+
+guile-sdl-tutorial ! major memory leaks which eventually pulls system down due lack memeory
+
+
+
+
+=================================================================================================
+
+
+refresh2
+
+>cd ~/code/guile-scheme/guile-sdl-learning/012-repl-server
+>emacs hello.scm &
+>emacs hello.scm &
+>terminator &
+
+guile scheme test repl server
+hogs memory so may be a memory leak
+
+
+
+=================================================================================================
+
+pharo14
+pharo14.1 - with metacello Bloc loaded
+pharo14.2 - with metacello Bloc loaded + Breakout repo loaded
+pharo14.3 - continue Breakout - Breakout
+
+
+
+
+=================================================================================================
+
+~/bin/refresh
+opens emacs at latest pharo workspace
+open pharo
+open terminal at correct location
+opens chrome
+
+
+===============================================================================================
+
+pharo latest works
+- how to create a method on the class side of an object from playground
+- how to delete a method on the class side of an object from playground
+- how to add a class variable
+- how to remove a class variable
+
+* ideas * how about we try the Cly
+
+
+
+pharo smalltalk or just pharo
+
+toplo [new user interface]
+bloc + brick [builds on bloc]
+spec and spec2 [looks dated -does not update itself , gets corrupted]
+
+
+pharo-bloc-tutorial
+pharo-books
+pharo-concurrency-tutorial
+
+
+pharo 14 is too unstable to do some meaningful development work
+
+
+===============================================================================================
+clojure requires some version of java , using java 21 compatible
+
+clojure
+- install openjdk-21-jdk
+
+# install clojure
+
+curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
+chmod +x linux-install.sh
+sudo ./linux-install.sh --prefix /opt/clojure
+
+PATH=/opt/clojure/bin:$PATH
+export PATH
+
+# bashrc
+JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64/bin"
+export JAVA_HOME
+
+clj -> starts clojure repl
+
+<clojurescript>
+
