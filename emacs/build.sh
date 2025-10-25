@@ -2,6 +2,8 @@
 
 set -e 
 
+# --with-json option dropped due to elisp version integrated faster??
+
 ./configure \
     --prefix=/opt/emacs \
     --with-wide-int \
@@ -11,7 +13,6 @@ set -e
     --without-compress-install \
     --with-native-compilation \
     --with-tree-sitter \
-    --with-json \
     --with-mailutils \
     --with-cairo \
     --with-harfbuzz \
