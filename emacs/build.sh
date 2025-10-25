@@ -2,8 +2,11 @@
 
 set -e 
 
+unset CC
+
+
 # we wish to use clang from now on 
-export CC=clang
+#export CC=clang
 
 make distclean
 
