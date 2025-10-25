@@ -2,6 +2,9 @@
 
 set -e 
 
+# we wish to use clang from now on 
+export CC=clang
+
 make distclean
 
 # --with-json option dropped due to elisp version integrated faster??
