@@ -2,6 +2,8 @@
 
 set -e 
 
+make distclean
+
 # --with-json option dropped due to elisp version integrated faster??
 
 ./configure \
@@ -18,6 +20,8 @@ set -e
     --with-harfbuzz \
     --with-imagemagick \
   CFLAGS="-O3 -mtune=native -march=native -fomit-frame-pointer"
+
+make bootstrap
 
 make -j8
 sudo make install
