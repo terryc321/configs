@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Step 1: Stop and disable services 
+# Stop the running services: Use the following commands to stop the guix-daemon and gnu-store services.
+sudo systemctl stop guix-daemon.service
+sudo systemctl stop gnu-store.mount
+# Disable the services: Prevent them from starting automatically on boot.
+sudo systemctl disable guix-daemon.service
+sudo systemctl disable gnu-store.mount
+

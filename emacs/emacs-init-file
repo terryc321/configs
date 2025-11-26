@@ -1,4 +1,10 @@
 
+;; infinite scrollback on ansi-term - according to chatgpt
+(setq term-buffer-maximum-size nil)
+
+;; yank into ansi term !
+(define-key term-mode-map (kbd "C-c C-y") 'term-paste)
+
 ;; careful loading files as idris2 changed font and colors believe it or not
 ;; a default config to be placed at ~/.emacs.d/init.el
 

@@ -1,0 +1,107 @@
+
+#
+install quicklisp
+cd ~/quicklisp/local-projects
+requires git clone lem
+requires git clone micros
+requires git clone lem-mailbox
+requires git clone lem-extension-manager
+
+local-projects directory look like
+- lem
+- micros
+- lem-mailbox
+- lem-extension-manager
+
+so quicklisp can find them located at toplevel
+
+how start lem from repl ?
+
+> sbcl
+> (ql:quickload :lem)
+> (ql:quickload :lem-sdl)
+> (lem:lem)
+ ... lem editor should now be running in sdl mode ...
+
+
+# Lem is a general-purpose editor/IDE extensible in Common Lisp.
+
+![](https://raw.githubusercontent.com/Shinmera/lem-icon/gh-pages/icon-blue.svg)
+
+![Build Status](https://github.com/lem-project/lem/workflows/CI/badge.svg)
+[![Backers on Open Collective](https://opencollective.com/lem/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/lem/sponsors/badge.svg)](#sponsors)
+[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor-fafbfc?logo=GitHub-Sponsors)](https://github.com/sponsors/cxxxr)
+
+Many languages are supported with Lem's **built-in LSP support**.
+
+After installing lem, you can start developing in Common Lisp and extend the editor while it runs.
+
+Other features include:
+
+- Emacs and Vim modes
+- ncurses and SDL2 interfaces
+- a **project explorer** tree view
+- **project**-aware commands
+- interactive **grep** and **git** interfaces
+- **multiple cursors**
+- **terminal integration** with libvterm
+- keyboard macros
+- **tetris**
+- and more…
+
+## Install
+
+With Docker (ncurses version):
+
+    $ docker run --rm -it ghcr.io/lem-project/lem:latest
+
+### Lem-ncurses
+- [GNU/Linux](https://lem-project.github.io/installation/ncurses/linux/)
+- [MacOS](https://lem-project.github.io/installation/ncurses/macos/)
+- [Windows](https://lem-project.github.io/installation/ncurses/windows/)
+
+### Lem-sdl2
+- [GNU/Linux](https://lem-project.github.io//installation/sdl2/linux/)
+- [MacOS](https://lem-project.github.io//installation/sdl2/macos/)
+- [Windows](https://lem-project.github.io//installation/sdl2/windows/)
+
+
+## Screenshots
+![Terminal](screenshots/terminal.png)　　
+
+![Sdl2](screenshots/sdl2.png)　　
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
+
+<a href="https://github.com/lem-project/lem/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=lem-project/lem&max=24" />
+</a>
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/lem#backer)]
+
+<a href="https://opencollective.com/lem#backers" target="_blank"><img src="https://opencollective.com/lem/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/lem#sponsor)]
+
+<a href="https://opencollective.com/lem/sponsor/0/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/1/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/2/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/3/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/4/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/5/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/6/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/7/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/8/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/lem/sponsor/9/website" target="_blank"><img src="https://opencollective.com/lem/sponsor/9/avatar.svg"></a>
+
+
+
+# License
+[MIT](https://github.com/lem-project/lem/blob/master/LICENCE)
