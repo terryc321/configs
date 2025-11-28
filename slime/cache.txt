@@ -1,0 +1,2 @@
+/home/terry/src/sbcl-build/sbcl-2.5.9-source.tar.bz2
+/gnu/store/.links/16zrjx2b5m9rl79zj04b49qjb2sh3sydz889lsbcl3j1cdy9sc3d
