@@ -33,7 +33,7 @@
 (setq term-buffer-maximum-size nil)
 
 ;; yank into ansi term !
-(define-key term-mode-map (kbd "C-c C-y") 'term-paste)
+;; (define-key term-mode-map (kbd "C-c C-y") 'term-paste)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -45,7 +45,7 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;(set-frame-font "Inconsolata-12" nil t)
-(set-frame-font "FiraCode-12" nil t)
+(set-frame-font "FiraCode-11" nil t)
 ;;(set-frame-font "FiraCode-10" nil t)
 
 (defun my/init-file ()
@@ -119,6 +119,26 @@
                     "dune build")))
   :hook (neocaml-mode . my-ocaml-compile-command))
 
+(use-package magit
+  :ensure t)
+
+(use-package vterm
+  :ensure t)
+
+(use-package eat
+  :ensure t)
+
+(use-package vertico
+  :ensure t)
+
+(use-package ivy
+  :ensure t)
+
+(use-package treemacs
+  :ensure t)
+
+
+
 ;; === Keybindings ===
 (with-eval-after-load 'utop
   (define-key utop-mode-map (kbd "C-<up>") 'utop-history-goto-prev)
@@ -133,3 +153,17 @@
 (show-paren-mode 1)
 (electric-pair-mode 1)
 (setq-default indent-tabs-mode nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(company dune eat ivy magit neocaml ocaml-eglot opam-switch-mode
+             treemacs tuareg utop vertico vterm)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
